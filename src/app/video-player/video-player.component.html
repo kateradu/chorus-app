@@ -1,0 +1,35 @@
+<div class="page-container" [style.padding-top]="paddingTop">
+  <div class="inset-box">
+    <ng-container *ngIf="showingVideo; else noId">
+      <h2 class="title">Moment from meeting</h2>
+      <div class="video-container">
+        <video controls>
+          <source [src]="videoSource" type="video/mp4">
+        </video>
+      </div>
+
+      <div class="transcript-container">
+        <div *ngFor="let remark of transcript; let i = index">
+          <div class="avatar-container">
+            <div class="speaker-avatar" *ngIf="i === transcript.length - 1 || transcript[i + 1].new" [ngStyle]="speakerColors[remark.speaker]">
+              <span class="speaker-initial">{{ remark.speaker.slice(0,1) }}</span>
+            </div>
+          </div>
+          <div class="remark-container">
+            <div class="speaker" *ngIf="remark.new">{{ remark.speaker }}</div>
+            <div class="remark">{{ remark.snippet }}</div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #noId>
+      <p class="header-text red" *ngIf="id">Video not found.</p>
+      <p class="header-text">Please enter the video id to see the transcript:</p>
+      <form [formGroup]="videoForm" class="joined-form">
+        <input type="text" class="text-input" formControlName="id" (keydown.enter)="loadVideo($event)" [ngClass]="{'invalid': id && videoForm.controls.id.untouched}" />
+        <button type="button" (click)="loadVideo()" class="button primary joins-input"><img src="assets/icons/search-white.svg" class="icon" /></button>
+      </form>
+    </ng-template>
+  </div>
+</div>

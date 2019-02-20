@@ -1,0 +1,25 @@
+/* Variables */
+@import '../../assets/styles/variables';
+
+footer {
+  width: 100%;
+  height: $footer-height;
+}
+.logo {
+  height: 50px;
+  width: 200px;
+  padding-bottom: 20px;
+  margin: auto;
+}
+.logo img {
+  max-height: 100%;
+  max-width: 100%;
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+.line {
+  width: 100%;
+  height: 4px;
+  background: $turquoise;
+}

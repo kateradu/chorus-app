@@ -1,1 +1,54 @@
-/* You can add global styles to this file, and also import other style files */
+/* Fonts */
+@font-face {
+  font-family: SFUIText;
+  src: url(assets/fonts/sf-ui-text-regular.woff);
+  font-weight: 400;
+}
+
+/* Variables */
+@import 'assets/styles/variables';
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-stack;
+  background: $background-gray;
+  color: $dark-gray-font;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page-container {
+  min-height: -webkit-calc(100vh - #{$footer-height});
+  min-height: -moz-calc(100vh - #{$footer-height});
+  min-height: -o-calc(100vh - #{$footer-height});
+  min-height: calc(100vh - #{$footer-height});
+}
+
+/* Global button styles */
+.button {
+  display: inline-block;
+  padding: 8px 10px;
+  cursor: pointer;
+  -webkit-transition: .3s border, .3s background;
+  -moz-transition: .3s border, .3s background;
+  -o-transition: .3s border, .3s background;
+  transition: .3s border, .3s background;
+}
+.button.primary {
+  border: 1px solid $turquoise;
+  background: $turquoise;
+  color: white;
+}
+.button.primary:hover,
+.button.primary:focus {
+  border: 1px solid $teal;
+  background: $teal;
+}
+.button.primary:focus {
+  outline: none;
+}

@@ -1,0 +1,127 @@
+/* Variables */
+@import '../../assets/styles/variables';
+
+.page-container {
+  padding: 5vh 15px 80px;
+}
+.inset-box {
+  background: white;
+  width: 824px;
+  max-width: 100%;
+  border: 1px solid $border-gray;
+  border-radius: 5px;
+  margin: auto;
+  padding: 40px 30px 80px;
+}
+.title {
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+}
+.video-container {
+  width: 500px;
+  max-width: 100%;
+  box-shadow: 0 0 8px rgba(black, .3);
+  border-radius: 4px;
+  background: black;
+  padding: 4px 0;
+  margin: auto;
+}
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+.speaker {
+  font-size: 12px;
+  padding: 15px 10px 2px;
+}
+.remark {
+  font-size: 15px;
+  background: $background-gray;
+  border-radius: 28px;
+  padding: 8px 12px;
+  margin: 1px 0;
+}
+.remark-container {
+  display: inline-block;
+  /* Minus width of avatar-container */
+  max-width: -webkit-calc(100% - 36px);
+  max-width: -moz-calc(100% - 36px);
+  max-width: -o-calc(100% - 36px);
+  max-width: calc(100% - 36px);
+}
+.avatar-container {
+  display: inline-block;
+  width: 36px;
+  vertical-align: bottom;
+}
+.speaker-avatar {
+  border: 1px solid;
+  border-radius: 50%;
+  margin: 2px 4px;
+  padding: 4px;
+  height: 28px;
+  width: 28px;
+  display: inline-block;
+}
+.speaker-initial {
+  display: inline-block;
+  width: 18px;
+  text-align: center;
+}
+p.header-text {
+  text-align: center;
+}
+.red {
+  color: $red;
+}
+.joined-form {
+  height: 38px;
+  margin: auto;
+  width: 354px;
+  max-width: 100%;
+}
+.button {
+  height: 100%;
+}
+.text-input {
+  width: 310px;
+  /* input minus button width */
+  max-width: -webkit-calc(100% - 42px);
+  max-width: -moz-calc(100% - 42px);
+  max-width: -o-calc(100% - 42px);
+  max-width: calc(100% - 42px);
+  height: 100%;
+  border: 1px solid $border-gray;
+  vertical-align: top;
+  border-right: none;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+.text-input:focus {
+  outline: none;
+  border: 1px solid $turquoise;
+  border-right: none;
+}
+.text-input.invalid {
+  border: 1px solid $red;
+  border-right: none;
+}
+.icon {
+  vertical-align: top;
+  height: 20px;
+  width: 20px;
+}
+.button.joins-input {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  width: 42px;
+}
+
+@media(max-width: 480px) {
+  .inset-box {
+    padding: 40px 15px 60px;
+  }
+}
